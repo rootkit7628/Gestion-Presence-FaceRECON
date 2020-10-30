@@ -1,0 +1,105 @@
+body {
+    background-image: url('../../IMG/loading/loading1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Manjari';
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1A1D53;
+    top: 79%;
+    left: 40%;
+    text-align: center;
+    position: fixed;
+}
+
+#loadingProgressG {
+    text-align: center;
+    position: fixed;
+    top: 85%;
+    left: 19%;
+    width: 300px;
+    height: 14px;
+    overflow: hidden;
+    background-color: rgb(29, 210, 174);
+    border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+.loadingProgressG {
+    background-color: rgba(255, 255, 255, 0.86);
+    margin-top: 0;
+    margin-left: -300px;
+    animation-name: bounce_loadingProgressG;
+    -o-animation-name: bounce_loadingProgressG;
+    -ms-animation-name: bounce_loadingProgressG;
+    -webkit-animation-name: bounce_loadingProgressG;
+    -moz-animation-name: bounce_loadingProgressG;
+    animation-duration: 8s;
+    -o-animation-duration: 8s;
+    -ms-animation-duration: 8s;
+    -webkit-animation-duration: 8s;
+    -moz-animation-duration: 8s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    width: 300px;
+    height: 14px;
+}
+
+@keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
+
+@-o-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
+
+@-ms-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
+
+@-webkit-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
+
+@-moz-keyframes bounce_loadingProgressG {
+    0% {
+        margin-left: -300px;
+    }
+    100% {
+        margin-left: 300px;
+    }
+}
