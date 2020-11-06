@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <title>GS|P 1.0</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/rsidebar.css" />
+    <link rel="stylesheet" type="text/css" href="../FONTAWESOME/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/presence.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/camera.css">
+</head>
+
+
+<body>
+    <div class="container d-flex align-items-stretch">
+
+        <nav id="sidebar" class="img fixed-left" style="background-image: url(../IMG/bg0.jpg); position: fixed !important; height: 100% !important;">
+
+            <div class="p-4">
+
+                <h1><img src="../IMG/logo.svg" style="height: 40px; margin-right: 20px;"><a href="#" class="logo">GSP 1.0<span style="margin-left: 70px;"> Utile Moderne Optimale</span></a></h1>
+
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a onclick=camera() href="#"><span class="fa fa-video mr-3"></span>Camera</a>
+                    </li>
+                    <li>
+                        <a onclick=etudiant() href="#"><span class="fa fa-user-graduate mr-3"></span> Etudiant</a>
+                    </li>
+                    <li>
+                        <a onclick=personnel() href="#"><span class="fa fa-user-tie mr-3"></span>Personnel</a>
+                    </li>
+                    <li>
+                        <a onclick=professeur() href="#"><span class="fa fa-chalkboard-teacher mr-3"></span>Professeur</a>
+                    </li>
+                    <li>
+                        <a onclick=statistique() href="#"><span class="fa fa-chart-bar mr-3"></span>Statistique Etudiant</a>
+                    </li>
+                    <li>
+                        <a onclick=statistique() href="#"><span class="fa fa-chart-line mr-3"></span>Statistique Personnel</a>
+                    </li>
+                    <li>
+                        <a href="#" id="showRight"><span class="fa fa-address-card mr-3"></span> A propos</a>
+                    </li>
+                </ul>
+
+                <div class="mb-5">
+                    <h3 class="h6 mb-3">Deconnexion</h3>
+                    <form action="#">
+                        <div class="form-group d-flex">
+                            <div class="icon"><span class="icon-paper-plane"></span></div>
+                            <button type="submit" class="btn btn- ">
+                                <i class="fa fa-sign-out-alt" style="margin-right: 10px;"></i>Deconnexion
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="kitse p-4 p-md-5 pt-5" style="position: fixed; margin-left: 19%; width: 80% !important;">
+            <div class="table-container">
+                <div class="table10 ver1 m-b-110">
+                    <div class="table10-head">
+                        <table>
+                            <thead>
+                                <tr class="row100 head">
+                                    <th class="cell100 column1"><span class="fa fa-camera" style="margin-right:10px;"></span>CAMERA IP : SRICAM SP017</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="table10-body">
+                        <table>
+                            <tbody>
+                                <tr class="row100 body">
+                                    <td class="cell100 column1">
+                                        <video autoplay="true" id="videoElement"></video>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <a href="#"><span class="fa fa-info" ></span></a>
+            <a href="#"><span class="fa fa-users" ></span></a>
+            <a href="#"><span class="fa fa-paper-plane" ></span></a>
+            <a href="#"><span class="fa fa-power-off" ></span></a>
+        </nav>
+
+    </div>
+
+    <script src="../JS/jquery.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/classie.js"></script>
+    <script src="../JS/app.js"></script>
+
+</body>
+
+</html>

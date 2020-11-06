@@ -6,11 +6,11 @@ function createMainWindow(loadingWindow) {
     loadingWindow.hide()
 
     const mainWindow = new BrowserWindow({
-        width: 1000,
-        height: 700,
+        width: 1366,
+        height: 768,
         center: true,
-        minWidth: 1000,
-        minHeight: 700,
+        minWidth: 1366,
+        minHeight: 768,
         webPreferences: {
             nodeIntegration: true
         }
@@ -18,7 +18,7 @@ function createMainWindow(loadingWindow) {
 
     mainWindow.setMenu(null)
 
-    mainWindow.loadFile('./STATIC/LOGIN/login.html')
+    mainWindow.loadFile('./STATIC/HTML/login.html')
 
     mainWindow.on('close', function(event) {
         app.quit()
