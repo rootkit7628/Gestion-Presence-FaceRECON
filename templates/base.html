@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GS|P 1.0</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='fontawesome/css/all.min.css') }}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rsidebar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/presence.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/camera.css') }}">
+    <!--===============================================================================================-->
+    {% block style %} {% endblock %}
+</head>
+
+<body>
+    <div class="container d-flex align-items-stretch">
+
+        <nav id="sidebar" class="img fixed-left" style="background-image: url('{{ url_for('static', filename='img/bg0.jpg') }}'); position: fixed !important; height: 100% !important;">
+
+            <div class="p-4">
+
+                <h1><img src="{{ url_for('static', filename='img/logo.svg') }}" style="height: 40px; margin-right: 20px;"><a href="#" class="logo">GSP 1.0<span style="margin-left: 70px;"> Utile Moderne Optimale</span></a></h1>
+
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="/"><span class="fa fa-video mr-3"></span>Camera</a>
+                    </li>
+                    <li>
+                        <a href="/etudiant"><span class="fa fa-user-graduate mr-3"></span> Etudiant</a>
+                    </li>
+                    <li>
+                        <a href="/personnel"><span class="fa fa-user-tie mr-3"></span>Personnel</a>
+                    </li>
+                    <li>
+                        <a href="/professeur"><span class="fa fa-chalkboard-teacher mr-3"></span>Professeur</a>
+                    </li>
+                    <li>
+                        <a href="/statEtudiant"><span class="fa fa-chart-bar mr-3"></span>Statistique Etudiant</a>
+                    </li>
+                    <li>
+                        <a href="/statPersonnel"><span class="fa fa-chart-line mr-3"></span>Statistique Personnel</a>
+                    </li>
+                    <li>
+                        <a href="#" id="showRight"><span class="fa fa-address-card mr-3"></span> A propos</a>
+                    </li>
+                </ul>
+
+                <div class="mb-5">
+                    <h3 class="h6 mb-3">Deconnexion</h3>
+                    <form action="#">
+                        <div class="form-group d-flex">
+                            <div class="icon"><span class="icon-paper-plane"></span></div>
+                            <button type="submit" class="btn btn- ">
+                                <i class="fa fa-sign-out-alt" style="margin-right: 10px;"></i>Deconnexion
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="kitse p-4 p-md-5 pt-5" style="position: fixed; margin-left: 19%; width: 80% !important;">
+            {% block contenu %} {% endblock %}
+        </div>
+
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <a href="#"><span class="fa fa-info" ></span></a>
+            <a href="#"><span class="fa fa-users" ></span></a>
+            <a href="#"><span class="fa fa-paper-plane" ></span></a>
+            <a href="#"><span class="fa fa-power-off" ></span></a>
+        </nav>
+
+    </div>
+    {% block script%} {% endblock %}
+    <!--===============================================================================================-->
+    <script src="{{ url_for('static', filename = 'js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/classie.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'js/main.js') }}"></script>
+    <!--===============================================================================================-->
+</body>
+
+</html>
