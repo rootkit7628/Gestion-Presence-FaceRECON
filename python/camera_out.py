@@ -103,7 +103,7 @@ while True:
                     cursor = connection.cursor()
 
                     # update arrival_time
-                    sql = "INSERT INTO Presence(personne_id, date, heure, status) VALUES (SELECT personne_id FROM Personne WHERE prenom = %s), %s, %s, %s"
+                    sql = "INSERT INTO Presence(personne_id, date, heure, status) VALUES ((SELECT personne_id FROM Personne WHERE nom = %s), %s, %s, %s)"
                     val = (name, date_sortie, heure_sortie,status)
                     cursor.execute(sql, val)
                     
@@ -121,7 +121,7 @@ while True:
                     connection.close()
 
 
-            face_names.append(name)            
+            face_names.append(name)
         
     process_this_frame = not process_this_frame
             

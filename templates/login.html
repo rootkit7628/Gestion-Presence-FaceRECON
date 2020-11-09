@@ -3,18 +3,21 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 
 </head>
 
 <body>
     <div>
-        <form class="Box" action="dashboard.html" method="POST">
-            <img src="../IMG/logo.svg" alt="logo">
+        <form class="Box" action="/login" method="post">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo">
             <h1>Login</h1>
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input name="username" type="text" placeholder="Utilisateur" value="{{request.form.username }}" style="color: #07364E;">
+            <input name="password" type="password" placeholder="Mot de passe" value="{{request.form.password }}" style="color: #07364E;">
             <input type="submit" value="Login">
+            <p>or <a href="http://localhost:5000/signup" style="text-align:center;color: #07668A;">Créer un compte</a></p>
+            {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }} {% endif %}
         </form>
     </div>
 </body>

@@ -25,7 +25,7 @@ body {
 }
 
 .Box input[type="text"],
-.Box input[ type="Password"] {
+.Box input[type="Password"] {
     border: 0;
     background: none;
     display: block;
@@ -35,7 +35,7 @@ body {
     padding: 14px 10px;
     width: 200px;
     outline: none;
-    color: white;
+    color: #07364E;
     border-radius: 24px;
     transition: 0.25s;
 }
@@ -63,6 +63,6 @@ body {
 }
 
 .Box input[type="submit"]:hover {
-    color: white;
+    color: #076E92;
     background: linear-gradient(90deg, rgba(0, 140, 115, 1) 0%, rgba(35, 199, 142, 1) 48%, rgba(42, 219, 255, 1) 100%);
 }

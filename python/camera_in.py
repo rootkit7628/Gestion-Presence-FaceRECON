@@ -106,7 +106,7 @@ while True:
                     cursor = connection.cursor()
 
                     # update arrival_time
-                    sql = "INSERT INTO Presence(personne_id, date, heure, status) VALUES (SELECT personne_id FROM Personne WHERE prenom = %s), %s, %s, %s"
+                    sql = "INSERT INTO Presence(personne_id, date, heure, status) VALUES ((SELECT personne_id FROM Personne WHERE nom = %s), %s, %s, %s)"
                     val = (name, date_enter, heure_enter,status)
                     cursor.execute(sql, val)
                     

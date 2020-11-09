@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+
+</head>
+
+<body>
+    <div>
+        <form class="Box" action="/camera" method="POST">
+            <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="logo">
+            <h1>SIGNUP</h1>
+            <input type="text" placeholder="Utilisateur" style="color: #07364E;">
+            <input type="password" placeholder="Mot de passe" style="color: #07364E;">
+            <input type="password" placeholder="Confirmer mot de passe" style="color: #07364E;">
+            <input type="submit" value="Signup">
+            <p>or <a href="http://localhost:5000/" style="font-family:arial;text-align:center;color: #07668A;">Se connecter</a></p>
+        </form>
+    </div>
+</body>
+
+</html>
